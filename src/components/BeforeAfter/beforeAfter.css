@@ -1,0 +1,71 @@
+.body {
+  margin: 0;
+  padding: 0;
+  min-height: 80vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.goldenText {
+  color: goldenrod;
+  margin-bottom: -1em;
+}
+.blueText {
+  padding-left: 1em;
+  color: lightskyblue;
+}
+.whiteText {
+  color: #fff;
+}
+.orangeText {
+  color: orange;
+}
+.css {
+  width: 300px;
+  height: 400px;
+  background-color: rgb(30, 30, 30);
+  border-radius: 15px;
+  padding: 5px 15px;
+}
+
+.centre {
+  width: 40vw;
+  height: 15vw;
+}
+
+.btn {
+  background: none;
+  position: relative;
+  display: block;
+  font-family: 'lato';
+  text-decoration: none;
+  border: 2px solid;
+  border-color: #45a29e;
+  color: #45a29e;
+  text-align: center;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s all ease;
+}
+
+.btn::before {
+  background: #45a29e;
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(25deg);
+  z-index: -1;
+  transition: all 0.5s ease;
+  width: 120%;
+  height: 0;
+}
+
+.btn:hover {
+  color: aliceblue;
+  border-color: #45a29e;
+}
+
+.btn:hover::before {
+  height: 180%;
+}

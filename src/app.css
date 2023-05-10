@@ -1,0 +1,40 @@
+body {
+  background: aliceblue;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  padding: 5px 10px;
+}
+
+.link {
+  text-decoration: none;
+  color: #000;
+  transition: all 0.3s ease;
+  position: relative;
+  display: block;
+  transition: all 0.3s ease;
+}
+.link::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  border-bottom: 2px solid rgb(169, 80, 80);
+  height: 100%;
+  transition: all 0.3s ease;
+}
+.link:hover {
+  color: rgb(99, 94, 201);
+}
+.link:hover::before {
+  width: 100%;
+  font-weight: bold;
+}

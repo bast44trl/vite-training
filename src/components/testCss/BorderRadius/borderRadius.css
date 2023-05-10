@@ -1,0 +1,37 @@
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+.borderRadius {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 65vh;
+  background-color: antiquewhite;
+}
+
+.borderRadius input {
+  width: 50px;
+  padding: 2px 1px;
+}
+
+.borderRadius select {
+  margin: 5px;
+  padding: 2px 1px 3px;
+}
+
+.borderRadiusTest {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+  margin-right: 50px;
+}
+
+.borderRadiusBox {
+  border: 2px solid red;
+  background-color: white;
+  margin: 5px;
+  box-sizing: border-box;
+}
