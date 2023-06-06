@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { Routes, Route, Outlet, Link } from 'react-router-dom';
 
-import { Select } from './components/select/Select';
+import { Select } from './components/Select/Select';
 import './app.css';
 
 const BeforeAfter = React.lazy(() => import('./components/BeforeAfter/BeforeAfter'));
 const TestCSS = React.lazy(() => import('./components/testCss/TestCSS'));
-const CalculateSalary = React.lazy(() => import('./components/calculateSalary/CalculateSalary'));
+const CalculateSalary = React.lazy(() => import('./components/CalculateSalary/CalculateSalary'));
+const CssAnimations = React.lazy(() => import('./components/CssAnimations/CssAnimations'));
 
 // select options
 const options = [
@@ -55,6 +56,14 @@ function App() {
             </React.Suspense>
           }
         />
+        <Route
+          path="cssAnimations"
+          element={
+            <React.Suspense fallback={<>...</>}>
+              <CssAnimations />
+            </React.Suspense>
+          }
+        />
         <Route path="*" element={<NoMatch />} />
       </Route>
     </Routes>
@@ -89,6 +98,11 @@ function Layout() {
           <li>
             <Link className="link" to="/calculateSalary">
               Calculate Salary
+            </Link>
+          </li>
+          <li>
+            <Link className="link" to="/cssAnimations">
+              CSS Animations
             </Link>
           </li>
         </ul>

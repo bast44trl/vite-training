@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import InputAndSelect from '../../inputAndSelect/InputAndSelect';
+import InputAndSelect from '../../InputAndSelect/InputAndSelect';
 import './borderRadius.css';
 
 export default function BorderRadius() {
