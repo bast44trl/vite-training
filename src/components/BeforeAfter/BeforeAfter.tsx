@@ -1,6 +1,6 @@
 import React, { ReactNode, useState } from 'react';
 
-import InputAndSelect from '../inputAndSelect/InputAndSelect';
+import InputAndSelect from '../InputAndSelect/InputAndSelect';
 import './beforeAfter.css';
 
 type CssLineProps = {
