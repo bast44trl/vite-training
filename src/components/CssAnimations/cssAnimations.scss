@@ -66,7 +66,7 @@ $cd-primary: rgb(180, 89, 219);
 $cd-secondary: rgb(241, 120, 7);
 $ball-size: 4rem;
 
-.btn {
+.btn__blow {
   background: $cd-primary;
   font-size: 1rem;
   cursor: pointer;
@@ -75,6 +75,12 @@ $ball-size: 4rem;
   max-width: 25vw;
   &:active + .ball {
     transform: scale(1);
+  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  & #mtn {
+    font-size: 0.7rem;
   }
 }
 .ball {
@@ -86,4 +92,35 @@ $ball-size: 4rem;
   border-radius: $ball-size * 0.5;
   transform: scale(0.1);
   transition: all 4s;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: $cd-secondary;
+  transform: scale(0.1);
+  transition: transform 330ms ease-in-out;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  span {
+    display: inline-block;
+    color: #fff;
+    transform: translateY(300%);
+    transition: transform 280ms ease-out 50ms;
+  }
+}
+.btn__boop {
+  background: $cd-primary;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  border-radius: 10rem;
+  border: none;
+  &:hover + .box {
+    transform: scale(1);
+    span {
+      transform: translateY(0);
+    }
+  }
 }
