@@ -15,8 +15,17 @@ function CssAnimations() {
         </div>
       </div>
       <div className="container">
-        <div className="btn">Gonfle moi !</div>
+        <div className="btn__blow">
+          <span>Gonfle moi !</span>
+          <span id="mtn">(Maintenir)</span>
+        </div>
         <div className="ball"></div>
+      </div>
+      <div className="container">
+        <button className="btn__boop">Transform!</button>
+        <div className="box">
+          <span>Boop!</span>
+        </div>
       </div>
     </div>
   );
