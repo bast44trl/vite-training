@@ -52,6 +52,15 @@ function CssAnimations() {
           <span>SkewX</span>
         </div>
       </div>
+      <div className="container">
+        <button className="btn perspective">Perspective</button>
+        <div>
+          <span>perspective(150px) rotateX(45deg)</span>
+        </div>
+        <div>
+          <span>perspective(200px) rotate3d(-1, 0.5, -0.75, -75deg)</span>
+        </div>
+      </div>
     </div>
   );
 }
