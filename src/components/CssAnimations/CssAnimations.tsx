@@ -1,5 +1,6 @@
 import React from 'react';
 
+import LightSaber from './lightSaber';
 import './cssAnimations.scss';
 
 function CssAnimations() {
@@ -60,6 +61,25 @@ function CssAnimations() {
         <div>
           <span>perspective(200px) rotate3d(-1, 0.5, -0.75, -75deg)</span>
         </div>
+      </div>
+      <div className="container">
+        <div className="btn load">Charger!</div>
+        <div className="progress">
+          <div className="progress__bar"></div>
+        </div>
+      </div>
+      <div className="container">
+        <div className="button3d">
+          <div className="btn3d">
+            <div className="btn__flip">
+              <div className="btn__flip--off">OFF</div>
+              <div className="btn__flip--on">ON</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="container">
+        <LightSaber />
       </div>
     </div>
   );

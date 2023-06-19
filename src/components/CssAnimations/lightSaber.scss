@@ -1,0 +1,80 @@
+// Poignée du sabre laser
+.lightsaber .hilt {
+  cursor: pointer;
+  width: 18px;
+  height: 65px;
+  border-bottom: solid 4px grey;
+  border-top: solid 5px grey;
+  border-radius: 5px;
+  z-index: 1;
+  background: rgb(226, 226, 226);
+  background: linear-gradient(
+    to right,
+    rgba(226, 226, 226, 1) 0%,
+    rgba(219, 219, 219, 1) 50%,
+    rgba(209, 209, 209, 1) 51%,
+    rgba(254, 254, 254, 1) 100%
+  );
+
+  // Bouton de la poignée
+  & > .switch {
+    background: rgb(55, 130, 51);
+    width: 4px;
+    height: 12px;
+    position: absolute;
+    bottom: 25px;
+    left: 13px;
+    border-radius: 10px;
+  }
+
+  //Au clic sur la poignée, le laser prend la taille voulue en hauteur
+  &:active + .plasma {
+    transform: scale(1, 1.7);
+  }
+
+  &:active > .switch {
+    transform: scale(0.7, 1);
+  }
+}
+
+.lightsaber .plasma {
+  transition: transform 300ms;
+  border-radius: 12px 12px 0 0;
+  position: absolute;
+  bottom: 70px;
+  left: 3px;
+  width: 10px;
+  display: block;
+  transform: scale(1, 0);
+  height: 250px;
+  transform-origin: bottom center;
+  z-index: -1;
+  filter: blur(1px);
+}
+
+.vader {
+  background: linear-gradient(
+    to right,
+    rgba(47, 249, 36, 1) 0%,
+    rgba(254, 254, 254, 1) 30%,
+    rgba(254, 254, 254, 1) 47%,
+    rgba(254, 254, 254, 1) 71%,
+    rgba(47, 249, 36, 1) 100%
+  );
+  box-shadow: 0 0 10px rgb(47, 249, 36);
+}
+
+body {
+  background: #333;
+}
+
+.lightsaber-example {
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+  transform: rotate(90deg) translateY(200px);
+}
+
+.lightsaber {
+  position: relative;
+}
