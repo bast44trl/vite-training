@@ -215,3 +215,31 @@ $ball-size: 4rem;
     }
   }
 }
+.perspective ~ div {
+  height: 120px;
+  width: 160px;
+  min-height: 75px;
+  min-width: 60px;
+  background: darkcyan;
+  margin-left: 30px;
+  padding: 5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  display: grid;
+  place-items: center;
+  span {
+    color: #fff;
+  }
+}
+.perspective {
+  &:hover {
+    ~ div:nth-child(2) {
+      transform: perspective(150px) rotateX(45deg);
+      transition: all 0.5s ease-in-out;
+    }
+    ~ div:nth-child(3) {
+      transform: perspective(200px) rotate3d(-1, 0.5, -0.75, -75deg);
+      transition: all 0.5s ease-in-out;
+    }
+  }
+}
