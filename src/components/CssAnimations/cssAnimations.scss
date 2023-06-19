@@ -5,6 +5,7 @@
   width: 95vw;
   padding: 10px 15px 300px;
   display: flex;
+  justify-content: space-around;
   flex-wrap: wrap;
 }
 
@@ -22,9 +23,11 @@ $cd-danger: #b20a37;
 .container {
   background-color: rgb(237, 246, 247);
   width: 40vw;
-  height: 100px;
-  padding: 0.5rem 1rem;
-  margin: 10px;
+  min-width: 300px;
+  min-height: 100px;
+  height: 25vh;
+  padding: 0.5rem;
+  margin: 5px;
   border-radius: 10px;
   display: flex;
   flex-wrap: wrap;
@@ -65,14 +68,17 @@ $cd-danger: #b20a37;
 $cd-primary: rgb(180, 89, 219);
 $cd-secondary: rgb(241, 120, 7);
 $ball-size: 4rem;
-
-.btn__blow {
+.btn {
   background: $cd-primary;
-  font-size: 1rem;
+  font-size: 0.9rem;
   cursor: pointer;
-  padding: 1rem 1.5rem;
+  padding: 0.5rem 1rem;
   border-radius: 10rem;
   max-width: 25vw;
+  border: none;
+  margin: 0.5rem;
+}
+.blow {
   &:active + .ball {
     transform: scale(1);
   }
@@ -110,17 +116,102 @@ $ball-size: 4rem;
     transition: transform 280ms ease-out 50ms;
   }
 }
-.btn__boop {
-  background: $cd-primary;
-  cursor: pointer;
-  padding: 0.5rem 1rem;
-  margin: 0.5rem;
-  border-radius: 10rem;
-  border: none;
+.boop {
   &:hover + .box {
     transform: scale(1);
     span {
       transform: translateY(0);
+    }
+  }
+}
+
+.rot {
+  &:hover + .boxes {
+    & > .boxes--rotDegrees {
+      transform: rotate(0deg);
+    }
+    & > .boxes--rotTurns {
+      transform: rotate(0turn);
+    }
+  }
+}
+.boxes {
+  width: 50%;
+  min-width: 250px;
+  display: flex;
+  justify-content: center;
+  & div {
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    padding: 0 5px;
+    margin-left: 10%;
+    display: grid;
+    place-items: center;
+  }
+  &--rotDegrees {
+    background: paleturquoise;
+    transform: rotate(-360deg);
+    transition: transform 500ms ease-in-out;
+  }
+
+  &--rotTurns {
+    background: pink;
+    transform: rotate(-1turn);
+    transition: transform 500ms ease-in-out;
+  }
+}
+.combine + div {
+  background: #b20a37;
+  height: 75px;
+  width: 75px;
+  margin-left: 10%;
+  color: #fff;
+  overflow: hidden;
+  transform: scale(0) rotate(-90deg);
+  transition: all 330ms ease-in-out;
+  display: grid;
+  place-items: center;
+  span {
+    transform: translateY(250%);
+    transition: all 280ms ease-out 50ms;
+  }
+}
+.combine {
+  &:hover + div {
+    transform: scale(1) rotate(0deg);
+    & span {
+      transform: translateY(0);
+    }
+  }
+}
+.skew ~ div {
+  height: 75px;
+  width: 60px;
+  background: #b20a37;
+  margin-left: 30px;
+  text-align: center;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  display: grid;
+  place-items: center;
+  span {
+    color: #fff;
+  }
+}
+.skew {
+  &:hover {
+    ~ div:nth-child(2) {
+      transform: skew(40deg, 40deg);
+      transition: all 0.5s ease-in-out;
+    }
+    ~ div:nth-child(3) {
+      transform: skewY(40deg);
+      transition: all 0.5s ease-in-out;
+    }
+    ~ div:nth-child(4) {
+      transform: skewX(40deg);
+      transition: all 0.5s ease-in-out;
     }
   }
 }
