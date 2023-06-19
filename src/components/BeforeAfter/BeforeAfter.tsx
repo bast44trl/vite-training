@@ -37,9 +37,9 @@ function CssLine({ property, value }: CssLineProps) {
 } */
 
 export default function BeforeAfter() {
-  const [fontSizeNumber, setFontSizeNumber] = useState<number>(4);
-  const [fontSizeValue, setFontSizeValue] = useState<string>('em');
-  const [paddingNumber, setPaddingNumber] = useState<number>(4);
+  const [fontSizeNumber, setFontSizeNumber] = useState<number>(5);
+  const [fontSizeValue, setFontSizeValue] = useState<string>('rem');
+  const [paddingNumber, setPaddingNumber] = useState<number>(40);
   const [paddingValue, setPaddingValue] = useState<string>('px');
   const [borderRadiusNumber, setBorderRadiusNumber] = useState<number>(40);
   const [borderRadiusValue, setBorderRadiusValue] = useState<string>('px');

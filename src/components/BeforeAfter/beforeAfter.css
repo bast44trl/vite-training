@@ -34,6 +34,7 @@
 }
 
 .btn {
+  min-width: fit-content;
   background: none;
   position: relative;
   display: block;
