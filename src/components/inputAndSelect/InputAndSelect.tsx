@@ -11,16 +11,12 @@ export default function InputAndSelect({ number, setNumber, value, setValue }: I
   return (
     <>
       <input
-        style={{ width: '3em', height: '1em', marginRight: '5px' }}
+        style={{ width: '3em', height: '15px', marginRight: '5px' }}
         type="number"
         value={number}
         onChange={(e) => setNumber(Number(e.target.value))}
       />
-      <select
-        style={{ height: '1.4em', transform: 'translateY(1px)', borderRadius: 'none' }}
-        value={value}
-        onChange={(e) => setValue(e.target.value)}
-      >
+      <select style={{ height: '21px', borderRadius: 'none' }} value={value} onChange={(e) => setValue(e.target.value)}>
         <option value="px">px</option>
         <option value="%">%</option>
         <option value="em">em</option>
