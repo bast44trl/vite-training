@@ -92,7 +92,7 @@ function Layout() {
           </li>
           <li>
             <Link className="link" to="/beforeAfter">
-              ::before
+              ::before/::after
             </Link>
           </li>
           <li>

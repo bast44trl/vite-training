@@ -39,7 +39,7 @@ function CssLine({ property, value }: CssLineProps) {
 export default function BeforeAfter() {
   const [fontSizeNumber, setFontSizeNumber] = useState<number>(5);
   const [fontSizeValue, setFontSizeValue] = useState<string>('rem');
-  const [paddingNumber, setPaddingNumber] = useState<number>(40);
+  const [paddingNumber, setPaddingNumber] = useState<number>(20);
   const [paddingValue, setPaddingValue] = useState<string>('px');
   const [borderRadiusNumber, setBorderRadiusNumber] = useState<number>(40);
   const [borderRadiusValue, setBorderRadiusValue] = useState<string>('px');
@@ -51,6 +51,12 @@ export default function BeforeAfter() {
         <CssLine property="background" value="none" />
         <CssLine property="position" value="relative" />
         <CssLine property="display" value="block" />
+        <CssLine property="font-family" value="lato" />
+        <CssLine property="text-decoration" value="none" />
+        <CssLine property="border-color" value="#45a29e" />
+        <CssLine property="color" value="#45a29e" />
+        <CssLine property="text-align" value="center" />
+        <CssLine property="border" value="2px solid" />
         <CssLine
           property="padding"
           value={
@@ -73,11 +79,6 @@ export default function BeforeAfter() {
             />
           }
         />
-        <CssLine property="font-family" value="lato" />
-        <CssLine property="text-decoration" value="none" />
-        <CssLine property="border-color" value="#45a29e" />
-        <CssLine property="color" value="#45a29e" />
-        <CssLine property="text-align" value="center" />
         <CssLine
           property="border-radius"
           value={
@@ -89,12 +90,11 @@ export default function BeforeAfter() {
             />
           }
         />
-        <CssLine property="border" value="2px solid" />
       </div>
       <div className="centre">
         <a
           href="#body"
-          className="btn"
+          className="btn__after"
           style={{
             fontSize: `${fontSizeNumber}${fontSizeValue}`,
             padding: `${paddingNumber}${paddingValue}`,

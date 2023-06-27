@@ -22,10 +22,13 @@
 }
 .css {
   width: 300px;
-  height: 400px;
+  height: fit-content;
   background-color: rgb(30, 30, 30);
   border-radius: 15px;
-  padding: 5px 15px;
+  padding: 5px 15px 25px 15px;
+}
+.css :nth-last-child(-n + 3) {
+  margin-top: 10px;
 }
 
 .centre {
@@ -33,9 +36,9 @@
   height: 15vw;
 }
 
-.btn {
+.btn__after {
   min-width: fit-content;
-  background: none;
+  width: 500px;
   position: relative;
   display: block;
   font-family: 'lato';
@@ -49,24 +52,27 @@
   transition: 0.5s all ease;
 }
 
-.btn::before {
-  background: #45a29e;
+.btn__after::after {
+  width: 700px;
+  height: 0;
   content: '';
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) rotate(25deg);
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: radial-gradient(ellipse at center, #9f1465, #261a21);
+  opacity: 0;
   z-index: -1;
   transition: all 0.5s ease;
-  width: 120%;
-  height: 0;
 }
 
-.btn:hover {
+.btn__after:hover {
+  transition: 0.5s all ease;
   color: aliceblue;
-  border-color: #45a29e;
+  border-color: #9f1465;
 }
 
-.btn:hover::before {
-  height: 180%;
+.btn__after:hover::after {
+  height: 450px;
+  opacity: 1;
 }
