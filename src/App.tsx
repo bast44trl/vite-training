@@ -8,6 +8,7 @@ const BeforeAfter = React.lazy(() => import('./components/BeforeAfter/BeforeAfte
 const TestCSS = React.lazy(() => import('./components/testCss/TestCSS'));
 const CalculateSalary = React.lazy(() => import('./components/CalculateSalary/CalculateSalary'));
 const CssAnimations = React.lazy(() => import('./components/CssAnimations/CssAnimations'));
+const Random = React.lazy(() => import('./components/Random/Random'));
 
 // select options
 const options = [
@@ -64,6 +65,14 @@ function App() {
             </React.Suspense>
           }
         />
+        <Route
+          path="random"
+          element={
+            <React.Suspense fallback={<>...</>}>
+              <Random />
+            </React.Suspense>
+          }
+        />
         <Route path="*" element={<NoMatch />} />
       </Route>
     </Routes>
@@ -103,6 +112,11 @@ function Layout() {
           <li>
             <Link className="link" to="/cssAnimations">
               CSS Animations
+            </Link>
+          </li>
+          <li>
+            <Link className="link" to="/random">
+              Random stuff
             </Link>
           </li>
         </ul>
