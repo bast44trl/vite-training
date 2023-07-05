@@ -30,6 +30,12 @@ const Random: React.FC = () => {
             <div className="courses__course__progress">
               <div className={`courses__course__progress__bar`}>
                 <span>{counter}%</span>
+                <style>{`@keyframes loading {
+                    to {
+                      transform: translateX(-${100 - number}%);
+                      opacity: 1;
+                    }
+                  }`}</style>
               </div>
             </div>
           </li>

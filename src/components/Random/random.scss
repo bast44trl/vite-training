@@ -91,12 +91,6 @@ $minHeight: 80vh;
             opacity: 0;
             animation: loading 3s forwards;
           }
-          @keyframes loading {
-            to {
-              transform: translateX(-32%);
-              opacity: 1;
-            }
-          }
         }
       }
     }
