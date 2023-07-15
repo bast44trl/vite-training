@@ -328,3 +328,64 @@ $btn-height: 4.5vw;
     }
   }
 }
+
+$cd-bars: #57c2a4;
+$size: 4vh;
+$cd-bars-inv: #d66d6d;
+$anim-dur: 1000ms;
+$num-bars: 5;
+$anim-delay: $anim-dur / $num-bars;
+
+.loadBars {
+  width: $size * 12;
+  height: $size * 3;
+  display: flex;
+  justify-content: space-evenly;
+  &__bar {
+    background-color: $cd-bars;
+    height: 100%;
+    width: $size;
+    animation: bars $anim-dur backwards infinite ease-in-out alternate;
+    @for $i from 1 through $num-bars {
+      &--#{$i} {
+        animation-delay: $anim-delay * $i;
+      }
+      &--#{$i}-inv {
+        animation-delay: $anim-delay * $i + random(100) * 15ms;
+        animation-direction: alternate-reverse;
+        background-color: $cd-bars-inv;
+        &:hover {
+          animation-play-state: paused;
+        }
+      }
+    }
+  }
+}
+
+@keyframes bars {
+  0% {
+    transform: scaleY(0.3);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+.spin {
+  background-color: #15dea5;
+  width: 15vh;
+  height: 15vh;
+  animation: spin 3s linear infinite paused;
+  &:hover {
+    animation-play-state: running;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
