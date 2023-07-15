@@ -81,6 +81,26 @@ function CssAnimations() {
       <div className="container">
         <LightSaber />
       </div>
+      <div className="container">
+        <span>Survolez les barres rouges pour les synchroniser avec leurs équivalents verts au dessus.</span>
+        <div className="loadBars">
+          <div className="loadBars__bar loadBars__bar--1"></div>
+          <div className="loadBars__bar loadBars__bar--2"></div>
+          <div className="loadBars__bar loadBars__bar--3"></div>
+          <div className="loadBars__bar loadBars__bar--4"></div>
+          <div className="loadBars__bar loadBars__bar--5"></div>
+        </div>
+        <div className="loadBars">
+          <div className="loadBars__bar loadBars__bar--1-inv"></div>
+          <div className="loadBars__bar loadBars__bar--2-inv"></div>
+          <div className="loadBars__bar loadBars__bar--3-inv"></div>
+          <div className="loadBars__bar loadBars__bar--4-inv"></div>
+          <div className="loadBars__bar loadBars__bar--5-inv"></div>
+        </div>
+      </div>
+      <div className="container">
+        <div className="spin"></div>
+      </div>
     </div>
   );
 }
